@@ -84,7 +84,7 @@ export default function BrandsPage() {
             </div>
             <div>
               <img
-                src="https://images.pexels.com/photos/2760241/pexels-photo-2760241.jpeg?auto=compress&cs=tinysrgb&w=900&q=80"
+                src="https://ascenseurchantier.ma/wp-content/uploads/2024/05/High-Top.png"
                 alt="JASO Tower Crane"
                 className="rounded-3xl w-full object-cover aspect-[4/3] shadow-2xl"
               />
