@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { Globe, Award, CheckCircle, ArrowRight, ExternalLink } from 'lucide-react';
+import { JASO_LOGO } from '@/lib/constants';
 
 export const metadata: Metadata = {
   title: 'Nos Marques — CASAGRUE',
@@ -42,8 +43,12 @@ export default function BrandsPage() {
                 <Globe className="w-4 h-4" />
                 Espagne — Fondée en 1963
               </div>
-              <div className="font-display font-black text-6xl text-neutral-900 dark:text-white mb-4 tracking-wider">
-                JASO
+              <div className="mb-4">
+                <img
+                  src={JASO_LOGO}
+                  alt="JASO"
+                  className="h-20 w-auto object-contain"
+                />
               </div>
               <div className="inline-flex items-center gap-2 bg-brand-gold/10 text-brand-gold text-sm font-bold px-4 py-1.5 rounded-full mb-6">
                 <Award className="w-4 h-4" />
@@ -74,20 +79,37 @@ export default function BrandsPage() {
                   </div>
                 ))}
               </div>
-              <Link
-                href="/products"
-                className="inline-flex items-center gap-2 bg-brand-red hover:bg-brand-red-dark text-white px-7 py-3.5 rounded-xl font-bold transition-all duration-200 hover:scale-105 shadow-lg shadow-brand-red/25"
-              >
-                Voir les Produits JASO
-                <ArrowRight className="w-5 h-5" />
-              </Link>
+              <div className="flex flex-wrap gap-3">
+                <Link
+                  href="/brands/jaso"
+                  className="inline-flex items-center gap-2 bg-brand-red hover:bg-brand-red-dark text-white px-7 py-3.5 rounded-xl font-bold transition-all duration-200 hover:scale-105 shadow-lg shadow-brand-red/25"
+                >
+                  Découvrir JASO
+                  <ArrowRight className="w-5 h-5" />
+                </Link>
+                <Link
+                  href="/products"
+                  className="inline-flex items-center gap-2 border border-neutral-200 dark:border-white/15 text-neutral-700 dark:text-neutral-200 hover:border-brand-red hover:text-brand-red px-7 py-3.5 rounded-xl font-semibold transition-all duration-200"
+                >
+                  Voir les Produits JASO
+                </Link>
+              </div>
             </div>
             <div>
-              <img
-                src="https://ascenseurchantier.ma/wp-content/uploads/2024/05/High-Top.png"
-                alt="JASO Tower Crane"
-                className="rounded-3xl w-full object-cover aspect-[4/3] shadow-2xl"
-              />
+              <div className="relative rounded-3xl overflow-hidden shadow-2xl">
+                <img
+                  src="https://images.pexels.com/photos/2760241/pexels-photo-2760241.jpeg?auto=compress&cs=tinysrgb&w=900&q=80"
+                  alt="Grue à tour JASO"
+                  className="w-full object-cover aspect-[4/3]"
+                />
+                <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm rounded-lg p-2 shadow-lg">
+                  <img
+                    src={JASO_LOGO}
+                    alt="JASO"
+                    className="h-8 w-auto object-contain"
+                  />
+                </div>
+              </div>
             </div>
           </div>
         </div>

@@ -37,6 +37,8 @@ export const COLORS = {
   gold: '#D4A017',
 };
 
+export const JASO_LOGO = 'https://ascenseurchantier.ma/wp-content/uploads/2024/05/High-Top.png';
+
 export const NAV_LINKS = [
   { label: 'Accueil', label_en: 'Home', href: '/' },
   { label: 'À Propos', label_en: 'About', href: '/about' },
