@@ -5,7 +5,7 @@ import {
   Phone, Mail, MapPin, Clock, Linkedin, Facebook, Instagram,
   Youtube, ArrowRight, ChevronRight
 } from 'lucide-react';
-import { COMPANY, JASO_LOGO } from '@/lib/constants';
+import { COMPANY } from '@/lib/constants';
 
 const footerServices = [
   { label: 'Location de Grues à Tour', href: '/services/location-grues-tour' },
@@ -68,13 +68,9 @@ export default function Footer() {
             </p>
             {/* Brands */}
             <div className="flex items-center gap-3">
-              <Link href="/brands/jaso" className="bg-white rounded px-2 py-1 inline-flex items-center transition-transform hover:scale-105">
-                <img
-                  src={JASO_LOGO}
-                  alt="JASO"
-                  className="h-7 w-auto object-contain"
-                />
-              </Link>
+              <div className="px-3 py-1.5 bg-white/10 rounded text-xs font-bold text-white border border-white/20">
+                JASO
+              </div>
               <div className="px-3 py-1.5 bg-white/10 rounded text-xs font-bold text-white border border-white/20">
                 ZOOMLION
               </div>

@@ -4,14 +4,14 @@ import { useRef } from 'react';
 import Link from 'next/link';
 import { motion, useInView } from 'framer-motion';
 import { ArrowRight, CheckCircle, Award, Globe, Zap } from 'lucide-react';
-import { COMPANY, JASO_LOGO } from '@/lib/constants';
+import { COMPANY } from '@/lib/constants';
 
 const brands = [
   {
     name: 'JASO',
     country: 'Espagne',
     description: 'Leader mondial en grues à tour de haute technologie. CASAGRUE est distributeur officiel exclusif JASO au Maroc.',
-    logo: JASO_LOGO,
+    logo: 'JASO',
     color: 'from-blue-600 to-blue-800',
     features: ['Grues à flèche distributrice', 'Grues à montage rapide', 'Technologie espagnole premium', 'Disponibles à la location et vente'],
     href: '/brands/jaso',
@@ -74,18 +74,10 @@ export default function BrandsSection() {
                   <div className={`absolute inset-0 bg-gradient-to-r ${brand.color} opacity-70`} />
                   <div className="absolute inset-0 flex items-center justify-center">
                     <div className="text-center">
-                      {brand.name === 'JASO' ? (
-                        <img
-                          src={JASO_LOGO}
-                          alt="JASO"
-                          className="h-14 w-auto object-contain brightness-0 invert mx-auto mb-1"
-                        />
-                      ) : (
-                        <div className="font-display font-black text-4xl text-white tracking-wider mb-1">
-                          {brand.logo}
-                        </div>
-                      )}
-                      <div className="flex items-center gap-2 text-white/80 text-sm justify-center">
+                      <div className="font-display font-black text-4xl text-white tracking-wider mb-1">
+                        {brand.logo}
+                      </div>
+                      <div className="flex items-center gap-2 text-white/80 text-sm">
                         <Globe className="w-3.5 h-3.5" />
                         {brand.country}
                       </div>

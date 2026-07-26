@@ -1,7 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { ArrowRight, Download, Tag, Ruler, Zap } from 'lucide-react';
-import { JASO_LOGO } from '@/lib/constants';
 
 export const metadata: Metadata = {
   title: 'Produits — CASAGRUE',
@@ -167,22 +166,9 @@ export default function ProductsPage() {
                     </div>
                   )}
                   <div className="absolute top-4 right-4">
-                    {product.brand === 'JASO' ? (
-                      <Link
-                        href="/brands/jaso"
-                        className="block bg-white/90 backdrop-blur-sm rounded-md p-1.5 border border-white/40 hover:bg-white transition-colors"
-                      >
-                        <img
-                          src={JASO_LOGO}
-                          alt="JASO"
-                          className="h-7 w-auto object-contain"
-                        />
-                      </Link>
-                    ) : (
-                      <span className="bg-white/20 backdrop-blur-sm text-white text-xs font-semibold px-3 py-1 rounded-full border border-white/30">
-                        {product.brand}
-                      </span>
-                    )}
+                    <span className="bg-white/20 backdrop-blur-sm text-white text-xs font-semibold px-3 py-1 rounded-full border border-white/30">
+                      {product.brand}
+                    </span>
                   </div>
                   <div className="absolute bottom-4 left-4 flex gap-2">
                     {product.available.map((a) => (
